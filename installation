@@ -1,0 +1,86 @@
+spring Boot
+=============================
+www.oracle.com
+jdk22  64 bit msi installer (163 mb)
+=============================
+whether java installed or not?:
+goto command prompt -- > java --version
+==============================
+google--> eclipse
+	--> download packages
+	--> eclipse ide for enterprise java and web developers
+	-->windows 64 bit --> 531 mb
+======================
+google --> spring boot initializr
+	website: start.spring.io
+	project type: maven (project management)
+	language: java
+	spring boot: 3.3.2
+	project meta data:
+		group: com.gowthamcode
+		Artifact:gowthamcart
+		name:gowthamcart
+		descriptition: ecommerce rest API using Spring Boot
+		packagename: com.gowthamcode.gowthamcart
+		package:jar
+		java:22
+	dependencies:
+            meaning: (rest api / database/ security services - library)
+		
+ 	    add dependencies:1) spring web must (rest api),
+		             2) spring data JPA (sql,database related api)
+					      (hibernate-easy db work)
+			     3) mysql driver
+			     4) spring boot dev tools (auto restart)
+	
+	press generate button:
+	automattically download the zip file (14.8 kb)
+================================================================
+open eclipse with your workspace
+
+file--> import --> maven --> existing maven project -->next --> 
+root directory --> browse (downloaded file 14.8 kb folder)
+-->pom.xml file (automatticall shown)
+-->finish
+
+problems --> 1 error
+	jdk 22 is not available in your system.
+
+fix the problem:
+project name --> build path -->configure build path --> libraries
+	-->jre system library 
+	--> double click
+	--> alternate jre: installed jre button click-->add-->standard jvm -->next -->directory button click -->
+	c:/program files/java/jdk22  select
+	jre system libraries jar file added automattically.
+	finish button click --> 
+	installed jre's --> tick latest 22
+	apply 
+	alternate jre : jdk-22 select.
+	finish
+	apply , apply and close.
+	
+problems error fixed
+======================================
+project structure:
+==================
+pom.xml (important file) project version & dependencies
+
+
+
+	
+					
+
+
+
+
+
+
+
+
+
+
+===================source==========
+https://youtu.be/Ug-brYWK6cI
+jvl code
+www.jvlcode.com
