@@ -64,12 +64,41 @@ problems error fixed
 ======================================
 project structure:
 ==================
-pom.xml (important file) project version & dependencies
+pom.xml (important file - maven configuration file) project version & dependencies
+help.md ---->project information
+src/main/java/...your package ---> filename.java file (First Entry point -- spring boot application starting point)
+src/main/resource.........> application.properties --> (configuration process about database....)
+                 -----> static folder -->css images javascript file
+			     ------>template folder -->html file tempate
+every file contains -----> model view controller repositary services
+use of mvc ----->code management easily
+running project:
+================
+controller -->simple javascript file
+controller use --> api request management from clinet (browser)
+src/main/java-->com.yourproject.yourpackage-->right click -->class -->name: TestController -->finish
+program:
+package com.yourproject.yourpackage;
+@RestController (user add --> annotation)
+public class TestController
+{
+@GetMapping("/test")
+public String test()
+{
+	return "HELLO WORLD";
+}
+}
+note: ctrl+shift+o (automattically adding annotation headers..)
+
+your mainfileappliation.java --> right click -->run as -->java application
+							-->we will see error to add db configuration
+src/main/resource -->application.properties --> spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+run or play button
+tomcat server running port 8080
+goto browser : http://localhost:8080/test
+you can see output
 
 
-
-	
-					
 
 
 
