@@ -36,6 +36,9 @@ google --> spring boot initializr
 	press generate button:
 	automattically download the zip file (14.8 kb)
 ================================================================
+extract downloaded zip file --> extracted folder paste into your eclipse workspace
+===============================================================
+
 open eclipse with your workspace
 
 file--> import --> maven --> existing maven project -->next --> 
@@ -62,6 +65,9 @@ project name --> build path -->configure build path --> libraries
 	
 problems error fixed
 ======================================
+suppose you faced pom.xml file error --> cvc-elt.1.a: Cannot find the declaration of element 'project'
+change all http into https in first two line in pom.xml file (3 places)
+========================================
 project structure:
 ==================
 pom.xml (important file - maven configuration file) project version & dependencies
