@@ -1,0 +1,46 @@
+🚀 Introduction: What is @Service in Spring Boot?
+In Spring Boot, the @Service annotation is used to define service-layer components that contain business logic. It is a specialized version of @Component, making it easier to recognize service classes in a Spring application.
+
+✅ Key Features of @Service:
+✔ Defines business logic in a Spring Boot application.
+✔ Works with dependency injection to manage service beans.
+✔ Helps separate the service layer from controllers and repositories.
+✔ Provides better readability and maintainability in large projects.
+
+📌 In this guide, you’ll learn:
+✅ How @Service works in Spring Boot.
+✅ How it differs from @Component and @Repository.
+✅ Best practices for structuring the service layer.
+
+1️⃣ Basic Example: Using @Service in a Spring Boot Application
+📌 Example: Creating a UserService to Manage Users
+
+1. Service Layer (UserService.java)
+@Service
+public class UserService {
+
+    private final Map<Integer, String> users = new HashMap<>(Map.of(
+        1, "Ramesh",
+        2, "Suresh"
+    ));
+
+    public String getUserById(int id) {
+        return users.getOrDefault(id, "User not found");
+    }
+}
+2. Controller Layer (UserController.java)
+@RestController
+@RequestMapping("/api/users")
+public class UserController {
+
+    private final UserService userService;
+
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
+
+    @GetMapping("/{id}")
+    public String getUserById(@PathVariable int id) {
+        return userService.getUserById(id);
+    }
+}
