@@ -68,6 +68,10 @@ problems error fixed
 suppose you faced pom.xml file error --> cvc-elt.1.a: Cannot find the declaration of element 'project'
 change all http into https in first two line in pom.xml file (3 places)
 ========================================
+another error: Cannot access Key[MavenProject, annotation=[none]] outside of a scoping block
+
+open pom.xml -----> line no.8 ----> 4.0.1 instead of 4.1.1
+
 project structure:
 ==================
 pom.xml (important file - maven configuration file) project version & dependencies
